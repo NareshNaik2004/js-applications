@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one{
+            text-align: center;
+        }
+        #two{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="one">Sum of Elements</h2>
+    <div id="two">
+        <input class="one" type="text" id="input" placeholder="Enter numbers">
+        <br><br>
+        <button class="one" onclick="sum()">Sum</button>
+        <p id="output"></p>
+    </div>
+    <script>
+        function sum()
+        {
+            let n=document.getElementById("input").value;
+            let numbers=n.split(/[\s,]+/).map(num => Number(num.trim()));
+            let s=0;
+            for (let i of numbers){
+                if(isNaN(i)){
+                    alert("Please enter a valid number");
+                    return;
+                }
+                s=s+i;
+            }
+            document.getElementById('output').innerText="SUM : "+s;
+        }
+
+    </script>
+</body>
+</html>

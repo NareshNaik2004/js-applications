@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #one{
+            text-align: center;
+        }
+        #two{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="one">Reverse a String</h2>
+    <div id="two">
+        <input type="text" id="demo" placeholder="Enter a string">
+        <br><br>
+        <button onclick="rev()">Submit</button>
+        <p id="output"></p>
+    </div>
+    <script>
+        function rev()
+        {
+            let str=document.getElementById('demo').value;
+            let str2=str.split("").reverse().join("");
+            document.getElementById('output').innerText="Reversed String : "+str2;
+        }
+    </script>
+</body>
+</html>
